@@ -1,0 +1,35 @@
+.mainpage {
+    position: absolute;
+    left: 15cm;
+    top: 3cm;
+    /* width: 500pt; */
+}
+
+li, dd {
+    line-height: 200%;
+}
+
+body {
+    background-image: url("./bgimg.jpg");
+    background-size: cover;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: dimgray;
+    text-decoration-line: line-through;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+::selection { /* 文字选择 */
+    background-color: #31B0D5;
+    color: 0;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="gbk2312" />
+	<title>欢迎来到测试</title>
+	<style>
+		.argue {
+			width: 40%;
+			text-align: left;
+		}
+		
+		body {
+			background: linear-gradient(45deg, rgb(199,237,233) 25%, rgb(175,215,237) 0, rgb(92,167,186) 50%, yellowgreen 0, yellowgreen 75%, rgb(129, 189, 189) 0);
+        	background-size: 200px 200px;
+		}
+	</style>
+	<script type="text/javascript" charset="gb2312">
+		function greeting() {
+			var curl = new Date()
+			var hour = curl.getHours()
+			if (hour < 12) { document.write("早上好！") }
+			else if (hour >= 12 && hour < 15) { document.write("中午好！") }
+			else if (hour >= 15 <= 19) { document.write("下午好！") }
+			else if (hour > 19) { document.write("晚上好！") }
+		}
+		function showTime() {
+			var t = new Date()
+			document.write(t.toLocaleDateString() + " " + t.getHours() + "时" + t.getMinutes() + "分")
+		}
+		function topaper() {
+			window.location.replace("./paper.html")
+		}
+	</script>
+</head>
+	
+<body>
+	<div align="center">
+		<h1><script type="text/javascript">greeting()</script>欢迎来到测试系统</h1>
+		<p>当前时间是</p>
+		<script type="text/javascript">showTime()</script>
+		<hr width="80%" />
+		
+		<h2>考试准则</h2>
+		<div class="argue">
+			<ol style="line-height: 200%;">
+				<li>本场考试闭卷，不可查阅相关资料</li>
+				<li>考试过程中禁止交头接耳</li>
+				<li>除了必要的演算工具和草稿纸外，不可携带其他物品参与考试</li>
+				<li>考试请在半小时内完成</li>
+			</ol>
+		</div>
+		
+		<input type="button" value="同意并开始考试" style="height: 40pt; width: 150pt; font-size: 125%; font-weight: 200" onclick="javascript:topaper()" /><br /> <br />
+		<a href="./rec.asp"><input type="button" value="查看已有成绩记录" style="height: 40pt; width: 150pt; font-size: 125%; font-weight: 200" /></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.titleBox {
+	width: 100%;
+	margin:0 auto;
+/*	display: flex;
+	justify-content:center;
+	align-items: center;
+*/
+	text-align: center;
+}
+
+.mainBox {
+	text-align: left;
+	margin: 0 auto;
+	width: 600pt;
+	padding-left: 100px;
+	padding-right: 100px;
+	vertical-align: middle;
+}
+
+.mainBox img {
+	vertical-align: middle;
+}

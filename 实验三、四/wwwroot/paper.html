@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="gbk2312" />
+		<title>正在考试</title>
+		<link rel="stylesheet" type="text/css" href="./lib/paper-css.css" />
+		<script type="text/javascript">
+		function timeprint() {
+			var curltime = new Date()
+			var endtime = new Date()
+			endtime.setTime(curltime.getTime() + 30 * 60 * 1000)
+			document.write("<font style='font-size: 12pt'; font-style:'normal'><br />开始时间：" + curltime.getHours() + "时" + curltime.getMinutes() + "分")
+			document.write(" - 结束时间：" + endtime.getHours() + "时" + endtime.getMinutes() + "分</font>")
+		}
+		var s = new Date()
+		function spanTime() {
+			var e = new Date()
+			var res = new Date()
+			res.setTime(e.getTime() - s.getTime())
+			alert("总用时\n" + res.getMinutes() + "分" + res.getSeconds() + "秒")
+		}
+		</script>
+	</head>
+	
+	<body>
+		<div class="titleBox">
+			<h1>测试<script type="text/javascript">timeprint()</script></h1>
+		</div>
+		<br />
+
+		<div class="mainBox">
+			<form action="./res.asp" method="POST">
+				<!-- 个人信息栏 -->
+				<fieldset>
+					<legend><b>个人信息</b></legend>
+					<table>
+						<tr>
+							<td>名字：</td>
+							<td><input name="uname" id="uname" type="text" size="20"/></td>
+						</tr>
+						<tr>
+							<td>学号：</td>
+							<td><input name="stdnum" id="stdnum" type="text" size="20" /></td>
+						</tr>
+						<tr>
+							<td>考场号：</td>
+							<td><input name="firm" id="firm" type="text" size="9" />（长度为7）</td>
+						</tr>
+					</table>
+				</fieldset>
+				<br />
+				
+				<!-- 单选题栏 -->
+				<fieldset>
+					<legend><b>单选题</b>（20分）</legend>
+					1. 求积分<img src="./ques/q1.svg" alt="q1"/>。<br>
+					<table width="100%" style="line-height: 200%">
+						<tr>
+							<td><input type="radio" name="a1" id="a1_1" value="A"/> <img src="./ques/a1_1.svg" alt="a1_1"/></td>
+							<td><input type="radio" name="a1" id="a1_2" value="B"/> <img src="./ques/a1_2.svg" alt="a1_2"/></td>
+							<td><input type="radio" name="a1" id="a1_3" value="C"/> <img src="./ques/a1_3.svg" alt="a1_3"/></td>
+						</tr>
+					</table>
+					
+					2. 计算机的英文是：<br>
+					<table width="100%" style="line-height: 200%">
+						<tr>
+							<td><input type="radio" name="a2" id="a2_1" value="A"/> Computer</td>
+							<td><input type="radio" name="a2" id="a2_2" value="B"/> Jisuanji</td>
+							<td><input type="radio" name="a2" id="a2_3" value="C"/> Caculator</td>
+						</tr>
+					</table>
+				</fieldset>
+				<br />
+				
+				<!-- 复选题 -->
+				<fieldset>
+					<legend><b>不定选项题</b>（10分）</legend>
+					3. 下列有关基因突变的叙述，不正确的是：<!-- ADH -->
+					<div style="line-height: 140%;">
+						<p><input type="checkbox" value="A" name="a3"/> 60%以上的癌症是由基因突变引发的，这说明基因的突变率较高</p>
+						<p><input type="checkbox" value="B" name="a3"/> 基因突变广泛存在于自然界的物种中</p>
+						<p><input type="checkbox" value="C" name="a3"/> 基因突变的产生是基因的分子结构发生了改变的结果</p>
+						<p><input type="checkbox" value="D" name="a3"/> 生物随环境的改变而产生适应性的突变</p>
+					</div>
+				</fieldset>
+				<br />
+				
+				<fieldset>
+					<legend><b>主观题</b>（70分）</legend>
+					4. 就以下材料，选好角度，确定立意，明确问题，自拟题目；不套作，不抄袭，不泄露个人信息；写一篇不少于800字的文章。
+					<p style="text-indent: 2em">春秋时期，齐国的公子纠与公子小白争夺君位，管仲和鲍叔分别辅佐他们。管仲带兵阻击小白，用箭射中他的衣带钩，小白装死逃脱。后来小白即位为君，史称齐桓公。鲍叔对桓公说，要想成就霸王之业，非管仲不可。于是桓公重用管仲，鲍叔甘居其下，终成―代霸业后人称颂齐桓公九合诸侯、一王天下，为“春秋五霸”之首。孔子说:“桓公九合诸侯，不以兵车，管仲之力也。”司马迁说:“天下不多(称赞}管仲之贤而多鲍叔能知人也。”</p>
+					<textarea name="a4" id="a4" rows="20" cols="106"></textarea>
+				</fieldset>
+				<br />
+				
+				<div style="text-align: center;">
+					<input style="height: 30pt; width: 90pt;" type="submit" name="Submit" onclick="spanTime()" value="上交试卷" />
+					<input style="height: 30pt; width: 90pt;" type="reset" name="Submit" value="清空试卷" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
